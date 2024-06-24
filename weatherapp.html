@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="images/1555512.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            
+        }
+
+        #app {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color:transparent;
+            border: transparent;
+            font-size: 25px;
+        }
+        .out {
+            background-color: rgb(119, 231, 169);
+            background-image:linear-gradient(pink,cyan,fuchsia,gold);
+            height: 470px;
+            padding-top: 150px;
+        }
+        h1{
+            font-size: 40px;
+            color: rgb(4, 243, 4);
+        }
+        input{
+            font-size: 20px;
+            border-radius: 30px;
+            border-color: orange;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            
+        
+        }
+        button{
+            font-size: 20px;
+            border-radius: 30px;
+            border-color: orange;
+            color: orange;
+            padding: 10px;
+        }
+        p{
+            color: lightgreen;
+        }
+        @media screen  and (max-width:800px) {
+           .out{
+            height:1620px;
+            background-color: rgb(119, 231, 169);
+            background-image:linear-gradient(pink,cyan,fuchsia,gold);
+            padding-top: 150px;
+           }
+           input{
+            width: 95%;
+           }
+           body{
+            text-align: center;
+           }
+          
+        }
+    </style>
+</head>
+<body>
+    <main class="out">
+        <div id="app">
+            <h1> <i class="fa-solid fa-cloud"></i> Weather App</h1>
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="getWeather"> Get Weather</button>
+            <div id="weatherInfo">
+                <p><strong>City:</strong> <span id="cityName"></span></p>
+                <p><strong>Temperature:</strong> <span id="temperature"></span> &deg;C</p>
+                <p><strong>Weather:</strong> <i class="fa-solid fa-cloud"></i> <span id="weatherDescription"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascript/weather.js"></script>
+</body>
+</html>
